@@ -1,6 +1,10 @@
 .tableHolder{
+    border: 1px solid rgb(205, 205, 205);
+    margin-top: 48px;
+    margin-left: 10px;
     align-items: center;
     height: 85vh;
+    width: 100rem;
     min-width: 20rem;
     overflow: auto;
 }

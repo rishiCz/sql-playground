@@ -9,7 +9,7 @@ const Table = ({ csv }) => {
   }, [csv]);
 
   return (
-    <div>
+    <>
       {csvData.length > 0 ? (
         <table>
           <thead>
@@ -32,7 +32,7 @@ const Table = ({ csv }) => {
       ): 
       <h2>Run a Query to Show Tables</h2>
       }
-    </div>
+    </>
   );
 };
 
