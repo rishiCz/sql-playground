@@ -1,0 +1,9 @@
+.inputsHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.inputsHolder button{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

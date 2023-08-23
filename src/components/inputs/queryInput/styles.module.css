@@ -1,0 +1,14 @@
+.queryInputHolder {
+  height: fit-content;
+  width: fit-content;
+}
+.queryInput {
+  border: solid;
+  padding: 0px 5px;
+  width: 50rem;
+  height: 85vh;
+  resize: horizontal;
+  min-height: 1em;
+  outline: none;
+  font-size: 2em;
+}
