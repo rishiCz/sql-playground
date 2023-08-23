@@ -1,17 +1,13 @@
 import styles from "./styles.module.css";
-import csvTable from "../../../constants/csvTables";
 import { setTable } from "../../../store/slices/tableSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { getTableFromQuery } from "../../../utils/functions";
 
 const RunButton = () => {
   const query = useSelector((state) => state.table).query;
   const dispatch = useDispatch();
   const handleClick = () => {
-    let table = null;
-      if(query.includes("employees")) table = csvTable.employees;
-      else if (query.includes("customers")) table = csvTable.customers
-      else if(query.includes("categories")) table = csvTable.categories;
-      else  table = csvTable.categories;
+    const table = getTableFromQuery(query)
     dispatch(setTable(table));
   };
   return (
