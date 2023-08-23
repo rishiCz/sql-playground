@@ -1,3 +1,13 @@
+.tableHolder{
+    align-items: center;
+    height: 85vh;
+    min-width: 20rem;
+    overflow: auto;
+}
 .tableName{
     font-size: 2em;
+}
+.tableDiv{
+    display: flex;
+    width: 100%;
 }
