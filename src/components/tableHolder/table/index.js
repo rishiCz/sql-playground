@@ -1,8 +1,8 @@
-import React, { useState, useEffect, memo } from "react";
+import { useState, useEffect, memo } from "react";
 import CSVParse from "papaparse";
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
-const Table = ({csv}) => {
+const Table = ({ csv }) => {
   const [csvData, setCSVData] = useState([]);
   useEffect(() => {
     const fetchCSVData = async () => {
@@ -11,21 +11,20 @@ const Table = ({csv}) => {
       const result = CSVParse.parse(text, { header: true }).data;
       setCSVData(result);
     };
-    if(csv)
-    fetchCSVData();
+    if (csv) fetchCSVData();
   }, [csv]);
 
   return (
     <div>
       <table>
         <thead>
-          {csvData.length > 0 && (
+          {csvData.length > 0 ? (
             <tr>
               {Object.keys(csvData[0]).map((key) => (
                 <th key={key}>{key}</th>
               ))}
             </tr>
-          )}
+          ): 'NoData'}
         </thead>
         <tbody>
           {csvData.map((row, index) => (
