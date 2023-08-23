@@ -7,7 +7,7 @@ const RunButton = () => {
   const query = useSelector((state) => state.table).query;
   const dispatch = useDispatch();
   const handleClick = () => {
-    const table = getTableFromQuery(query)
+    const table = getTableFromQuery(query.toLowerCase())
     dispatch(setTable(table));
   };
   return (

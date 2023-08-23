@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useRef, useState, useEffect, memo } from "react";
 import styles from "./styles.module.css";
 import { setQuery } from "../../../store/slices/tableSlice";
@@ -37,6 +37,7 @@ const QueryInput = () => {
     };
   }, [isResizing]);
 
+  const query = useSelector((state)=> state.table).query
   const dispatch = useDispatch();
   const handleInput = (event) => {
     dispatch(setQuery(event.target.value));
@@ -47,9 +48,11 @@ const QueryInput = () => {
       <textarea
         ref={queryInput}
         className={styles.queryInput}
+        value = {query}
         autoCorrect="off"
         spellCheck="false"
         tabIndex="0"
+        placeholder="..SQL Queries Here"
         onChange={handleInput}
       ></textarea>
       <div

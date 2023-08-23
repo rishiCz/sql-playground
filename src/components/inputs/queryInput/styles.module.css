@@ -1,6 +1,6 @@
 .queryInputHolder {
   height: 85vh;
-  width: 40rem;
+  width: 50rem;
   min-width: 20rem;
   max-width: 70rem;
   border: 1px solid #ccc;
@@ -10,7 +10,8 @@
 .queryInput {
   padding: 0px 5px;
   height: 100%;
-  width: 95%;
+  min-width: 20rem;
+  width: 100%;
   height: 100%;
   border: none;
   resize: none;
