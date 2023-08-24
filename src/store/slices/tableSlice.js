@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   table:{name:undefined,csv:undefined},
-  query:''
+  query:'',
+  fontSize:1
 };
 export const table = createSlice({
   name: "table",
@@ -12,13 +13,17 @@ export const table = createSlice({
     },
     setQuery: (state,action) =>{
       state.query=action.payload
+    },
+    setFontSize: (state,action)=>{
+      state.fontSize=action.payload
     }
   },
 });
 
 export const {
   setTable,
-  setQuery
+  setQuery,
+  setFontSize
 } = table.actions;
 
 export default table.reducer;

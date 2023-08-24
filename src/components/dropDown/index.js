@@ -1,4 +1,4 @@
-import { setQuery } from '../../../store/slices/tableSlice';
+import { setQuery } from '../../store/slices/tableSlice';
 import { useDispatch} from 'react-redux';
 import styles from './styles.module.css'
 

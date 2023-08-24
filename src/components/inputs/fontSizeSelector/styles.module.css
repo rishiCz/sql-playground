@@ -1,0 +1,38 @@
+.FontSizeSelectorDiv {
+    scale: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: -5px;
+    right: -19px;
+    display: flex;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+  }
+  .FontSizeSelectorDiv:hover {
+    top: 5px;
+    right: 5px;
+    scale: 100%;
+  }
+  .selectorButton {
+    width: 35px;
+    height: 35px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.selectorButton:hover {
+  background-color: #0056b3;
+}
+  
+  .FontSizeSelectorDiv label {
+    font-size: 18px;
+    margin: -2px 3px;
+  }
+  

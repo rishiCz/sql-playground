@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
-import { setTable } from "../../../store/slices/tableSlice";
+import { setTable } from "../../store/slices/tableSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { getTableFromQuery } from "../../../utils/functions";
+import { getTableFromQuery } from "../../utils/functions";
 
 const RunButton = () => {
   const query = useSelector((state) => state.table).query;

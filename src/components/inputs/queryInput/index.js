@@ -2,13 +2,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRef, useState, useEffect, memo } from "react";
 import styles from "./styles.module.css";
 import { setQuery } from "../../../store/slices/tableSlice";
+import FontSizeSelector from "../fontSizeSelector";
 
 const QueryInput = () => {
   const queryInput = useRef(null);
+  
   const queryInputHolder = useRef(null);
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(0);
   const [startX, setStartX] = useState(0);
+  const fontSize = useSelector((state)=>state.table).fontSize
+  // queryInput.style.fontSize=fontSize
+
 
   const handleMouseDown = (e) => {
     setIsResizing(true);
@@ -28,6 +33,8 @@ const QueryInput = () => {
     setIsResizing(false);
   };
   useEffect(() => {
+    console.log(queryInput.current.style)
+    queryInput.current.style.fontSize=`${fontSize}rem`;
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
 
@@ -35,7 +42,7 @@ const QueryInput = () => {
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [isResizing]);
+  }, [isResizing,fontSize]);
 
   const query = useSelector((state)=> state.table).query
   const dispatch = useDispatch();
@@ -45,6 +52,7 @@ const QueryInput = () => {
 
   return (
     <div ref={queryInputHolder} className={styles.queryInputHolder}>
+      <FontSizeSelector/>
       <textarea
         ref={queryInput}
         className={styles.queryInput}
