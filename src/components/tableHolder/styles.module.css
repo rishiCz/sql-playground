@@ -5,13 +5,19 @@
     height: 85vh;
     width: 100rem;
     min-width: 20rem;
-    overflow: auto;
     transition-duration: 600;
+}
+.tableHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3px;
 }
 .tableName{
     font-size: 2em;
 }
 .tableDiv{
+    overflow: auto;
     display: flex;
     width: 100%;
+    max-height: 94%;
 }

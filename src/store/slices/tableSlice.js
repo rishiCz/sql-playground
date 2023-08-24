@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   table: { name: undefined, csv: undefined },
   query: "",
-  fontSize: 1,
+  fontSize: 1.5,
   searchVal: "",
 };
 export const table = createSlice({

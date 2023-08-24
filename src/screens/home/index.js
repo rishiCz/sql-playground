@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <header className={styles.header}>
         <div className={styles.left}>
-          <label>Import </label>
+          <label>IMPORT </label>
           <QueryDropdown />
           <RunButton />
         </div>

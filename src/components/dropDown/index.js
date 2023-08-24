@@ -15,7 +15,8 @@ const QueryDropdown = () => {
 
   return (
     
-      <select  onChange={handleQueryChange} className={styles.queryDrop}>
+      <select onChange={handleQueryChange} value='' className={styles.queryDrop}>
+        <option value="" disabled>Select Predefined Queries</option>
         {queries.map((query, index) => (
           <option key={index} value={query}>
             {query}
