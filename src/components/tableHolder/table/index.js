@@ -1,9 +1,29 @@
-import { useState, useEffect, memo } from "react";
+import { useState, useEffect, memo, useRef } from "react";
 import { fetchCSVData } from "../../../utils/functions";
 import styles from "./styles.module.css";
+import { useSelector } from "react-redux";
 
 const Table = ({ csv }) => {
   const [csvData, setCSVData] = useState([]);
+  const [prevSearch, setPrevSearch] = useState(null);
+  const searchVal = useSelector((state) => state.table).searchVal;
+
+  const searchTable = (str) => {
+    if (prevSearch) prevSearch.style.backgroundColor = "unset";
+    var td = [...document.querySelectorAll("td")].find((element) =>
+      element.textContent.toLowerCase().includes(str)
+    );
+    if (td && str !== "") {
+      td.scrollIntoView({ behavior: "smooth", block: "center" });
+      td.style.backgroundColor = "yellow";
+      setPrevSearch(td);
+    }
+  };
+
+  useEffect(() => {
+    searchTable(searchVal);
+  }, [searchVal]);
+
   useEffect(() => {
     if (csv) fetchCSVData(csv).then((data) => setCSVData(data));
   }, [csv]);
@@ -29,9 +49,9 @@ const Table = ({ csv }) => {
             ))}
           </tbody>
         </table>
-      ): 
-      <h2>Run a Query to Show Tables</h2>
-      }
+      ) : (
+        <h2>Run a Query to Show Tables</h2>
+      )}
     </>
   );
 };

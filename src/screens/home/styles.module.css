@@ -1,4 +1,19 @@
-
+.header{
+  background-color: rgb(226, 226, 226);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left{
+  flex-basis: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: aqua; */
+}
+.left label{
+  font-size:1.5em;
+}
 .homeDiv {
   display: flex;
   margin: 10px;

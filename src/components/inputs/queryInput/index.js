@@ -12,7 +12,6 @@ const QueryInput = () => {
   const [initialWidth, setInitialWidth] = useState(0);
   const [startX, setStartX] = useState(0);
   const fontSize = useSelector((state)=>state.table).fontSize
-  // queryInput.style.fontSize=fontSize
 
 
   const handleMouseDown = (e) => {
@@ -33,7 +32,6 @@ const QueryInput = () => {
     setIsResizing(false);
   };
   useEffect(() => {
-    console.log(queryInput.current.style)
     queryInput.current.style.fontSize=`${fontSize}rem`;
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);

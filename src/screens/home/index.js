@@ -3,14 +3,20 @@ import TableHolder from "../../components/tableHolder";
 import Inputs from "../../components/inputs";
 import QueryDropdown from "../../components/dropDown";
 import RunButton from "../../components/runButton";
+import Search from "../../components/search";
 
 const Home = () => {
   return (
     <>
-      <header className="Header">
-        <label>Import </label>
-        <QueryDropdown />
-        <RunButton />
+      <header className={styles.header}>
+        <div className={styles.left}>
+          <label>Import </label>
+          <QueryDropdown />
+          <RunButton />
+        </div>
+        <div className={styles.right}>
+          <Search />
+        </div>
       </header>
       <div className={styles.homeDiv}>
         <Inputs />
