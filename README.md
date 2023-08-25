@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# SQL PlayGround
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SQL Playground is a web application designed to provide an interactive platform for dynamically loading dummy data tables and showcasing user-centric functionalities. Aimed at demonstrating various features, this project serves as a showcase rather than a practice environment for SQL queries, and implements features that are really helpful or essential to a regular user.
 
-## Available Scripts
+## Assignment Required Functionalities
+1. **Text Editor**: SQL text editor, where users can input their SQL queries.
 
-In the project directory, you can run:
+2. **Run Button**: A "Run" button triggers the execution of the SQL query in the text editor, showcasing immediate results.
 
-### `npm start`
+3. **Dropdown for Predefined Queries**: Users can select from a dropdown menu of predefined queries, demonstrating quick query access.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. **Display Tables**: The project core features culminate in the display of tables that show the output of executed queries
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Additional Functionalities
+1. **User-Friendly Design**: SQL Playground emphasizes user-centric design, offering an intuitive interface that focuses on usability.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Split View for Data and Query**: A split view layout showcases the coexistence of the SQL query editor and the displayed data tables.
 
-### `npm run build`
+1. **Line Number Indication**: The displayed query editor includes a line number indicator to assist users in code navigation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Font Size Customization**: The project showcases the ability to customize font sizes for optimal readability, catering to user preferences.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Resizable Interface Elements**: Demonstrating flexibility, users can resize elements like the query editor and table displays.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Dynamic CSV Export**: SQL Playground features a dynamic export option that allows users to convert table data to CSV format effortlessly.
 
-### `npm run eject`
+1. **Search Table Functionality**: The added search feature enables users to search within displayed tables, making data exploration even more efficient.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Client:** React (create react-app)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Server:** Node
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Plugins:
+    1. react-redux (state management), 
+    2. papaparse (CSV parsing), 
+    3. gh-pages (web deployment)
