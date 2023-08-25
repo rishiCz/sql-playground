@@ -1,39 +1,54 @@
 .queryInputHolder {
+  display: flex;
   height: 85vh;
+  background-color: brown;
   width: 50rem;
   min-width: 20rem;
   max-width: 70rem;
   border: 1px solid #ccc;
-  overflow: hidden;
   position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+.lineNumbers{
+  font-family: inherit;
+  text-align: center;
+  margin: 0;
+  color: #9a9a9a;
+  background-color: #d6d6d6;
+  width: fit-content;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+.lineNumbers::-webkit-scrollbar {
+  display: none;
 }
 .queryInput {
+  font-family: inherit;
   padding-top: 16px;
+  padding-left: 10px;
   min-width: 20rem;
   width: 100%;
-  height: 100%;
   border: none;
   resize: none;
-  font-size: 2em;
   overflow: auto;
-  white-space: pre-wrap;
+  white-space: nowrap;
+}
+.queryInput:focus{
+  outline: none;
 }
 .resizeHandle {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  user-select: none;
   align-items: center;
+  user-select: none;
   font-size: 1.5em;
   width: 10px;
-  height: 100%;
   background-color: #9f9f9f;
   cursor:e-resize;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
 }
 .resizeHandle:hover{
   background-color: #4f4f4f;

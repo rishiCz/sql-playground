@@ -1,4 +1,4 @@
-import { useState, useEffect, memo, useRef } from "react";
+import { useState, useEffect, memo} from "react";
 import { fetchCSVData } from "../../../utils/functions";
 import styles from "./styles.module.css";
 import { useSelector } from "react-redux";

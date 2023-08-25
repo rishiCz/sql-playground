@@ -9,7 +9,7 @@ const Search = ()=>{
         dispatch(setSearchVAl(event.target.value.toLowerCase()))
     }
     return(
-        <input placeholder='Search Table' type='text' className={styles.search} onChange={handleChange}/>
+        <input placeholder='Search Table Content' type='text' className={styles.search} onChange={handleChange}/>
     )
 }
 export default memo(Search)

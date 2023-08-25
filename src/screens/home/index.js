@@ -4,6 +4,7 @@ import Inputs from "../../components/inputs";
 import QueryDropdown from "../../components/dropDown";
 import RunButton from "../../components/runButton";
 import Search from "../../components/search";
+import Logo from "../../assets/sqlLogo.png"
 import { memo } from "react";
 
 const Home = () => {
@@ -11,7 +12,11 @@ const Home = () => {
     <>
       <header className={styles.header}>
         <div className={styles.left}>
-          <label>IMPORT </label>
+          <div>
+            <img className={styles.logo} src={Logo}/>
+            <label>PlayGround</label>
+          </div>
+          
           <QueryDropdown />
           <RunButton />
         </div>
