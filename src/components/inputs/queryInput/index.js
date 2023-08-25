@@ -7,8 +7,8 @@ import FontSizeSelector from "../fontSizeSelector";
 const QueryInput = () => {
   const query = useSelector((state)=> state.table).query
   const dispatch = useDispatch();
-  const queryInput = useRef(null);
-  const queryInputHolder = useRef(null);
+  const queryInputRef = useRef(null);
+  const queryInputHolderRef = useRef(null);
   const lineNumberRef = useRef(null);
   const [isResizing, setIsResizing] = useState(false);
   const [initialWidth, setInitialWidth] = useState(0);
@@ -16,7 +16,7 @@ const QueryInput = () => {
   const fontSize = useSelector((state)=>state.table).fontSize
 
   useEffect(() => {
-    queryInput.current.style.fontSize=`${fontSize}rem`;
+    queryInputRef.current.style.fontSize=`${fontSize}rem`;
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseup", handleMouseUp);
 
@@ -28,7 +28,7 @@ const QueryInput = () => {
 
   const handleMouseDown = (e) => {
     setIsResizing(true);
-    setInitialWidth(queryInputHolder.current.clientWidth);
+    setInitialWidth(queryInputHolderRef.current.clientWidth);
     setStartX(e.clientX);
   };
   const handleMouseMove = (e) => {
@@ -36,8 +36,8 @@ const QueryInput = () => {
     const deltaX = e.clientX - startX;
     const newWidth = initialWidth + deltaX;
     if (newWidth > 0) {
-      queryInputHolder.current.style.width = newWidth + "px";
-      queryInput.current.style.width = newWidth + "px";
+      queryInputHolderRef.current.style.width = newWidth + "px";
+      queryInputRef.current.style.width = newWidth + "px";
     }
   };
   const handleMouseUp = () => {
@@ -47,14 +47,18 @@ const QueryInput = () => {
     dispatch(setQuery(event.target.value));
   };
 
-  
+  const handleScroll = (scrollEvent) => {
+    const { scrollTop } = scrollEvent.target;
+    lineNumberRef.current.scrollTop = scrollTop;
+    queryInputRef.current.scrollTop = scrollTop;
+  };
 
   
 
   return (
-    <div ref={queryInputHolder} className={styles.queryInputHolder}>
+    <div ref={queryInputHolderRef} className={styles.queryInputHolder}>
       <FontSizeSelector/>
-      <div className={styles.lineNumbers} ref={lineNumberRef} >
+      <div className={styles.lineNumbers} ref={lineNumberRef} onScroll={handleScroll} >
           {query.split("\n").map((_, index) => (
             <div
               key={index}
@@ -71,13 +75,14 @@ const QueryInput = () => {
           ))}
       </div>
       <textarea className={styles.queryInput}
-        ref={queryInput}
+        ref={queryInputRef}
         value = {query}
         autoCorrect="off"
         spellCheck="false"
         tabIndex="0"
         placeholder="..SQL Queries Here"
         onChange={handleInput}
+        onScroll={handleScroll}
       ></textarea>
       <div className={styles.resizeHandle}
         onMouseDown={handleMouseDown}
