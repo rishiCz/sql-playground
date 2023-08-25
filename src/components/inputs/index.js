@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import QueryInput from './queryInput'
 import styles from './styles.module.css'
 
@@ -8,4 +9,4 @@ const Inputs = ()=>{
         </div>
     )
 }
-export default Inputs
+export default memo(Inputs)

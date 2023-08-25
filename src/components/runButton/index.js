@@ -2,6 +2,7 @@ import styles from "./styles.module.css";
 import { setTable } from "../../store/slices/tableSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { getTableFromQuery } from "../../utils/functions";
+import { memo } from "react";
 
 const RunButton = () => {
   const query = useSelector((state) => state.table).query;
@@ -16,4 +17,4 @@ const RunButton = () => {
     </button>
   );
 };
-export default RunButton;
+export default memo(RunButton)

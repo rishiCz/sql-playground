@@ -4,6 +4,7 @@ import Inputs from "../../components/inputs";
 import QueryDropdown from "../../components/dropDown";
 import RunButton from "../../components/runButton";
 import Search from "../../components/search";
+import { memo } from "react";
 
 const Home = () => {
   return (
@@ -25,4 +26,4 @@ const Home = () => {
     </>
   );
 };
-export default Home;
+export default memo(Home)

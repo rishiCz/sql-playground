@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 import styles from './styles.module.css'
 import Table from './table'
 import ExportCSVButton from './exportCSVButton'
+import { memo } from 'react'
 
 const TableHolder = ()=>{
     let tableData = null
@@ -24,4 +25,4 @@ const TableHolder = ()=>{
         </div>
     )
 }
-export default TableHolder
+export default memo(TableHolder)

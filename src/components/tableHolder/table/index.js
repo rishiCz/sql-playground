@@ -60,4 +60,4 @@ const Table = ({ csv, handleChildData }) => {
   );
 };
 
-export default Table;
+export default memo(Table)

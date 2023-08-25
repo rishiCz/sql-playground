@@ -1,6 +1,7 @@
 import styles from './styles.module.css'
 import { useSelector,useDispatch } from 'react-redux'
 import { setFontSize } from '../../../store/slices/tableSlice'
+import { memo } from 'react'
 
 const FontSizeSelector = ()=>{
     const dispatch = useDispatch()
@@ -19,4 +20,4 @@ const FontSizeSelector = ()=>{
         </div>
     )
 }
-export default FontSizeSelector
+export default memo(FontSizeSelector)

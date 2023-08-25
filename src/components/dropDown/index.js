@@ -1,6 +1,7 @@
 import { setQuery } from '../../store/slices/tableSlice';
 import { useDispatch} from 'react-redux';
 import styles from './styles.module.css'
+import { memo } from 'react';
 
 const QueryDropdown = () => {
   const queries = [
@@ -26,4 +27,4 @@ const QueryDropdown = () => {
   );
 };
 
-export default QueryDropdown;
+export default memo(QueryDropdown)
