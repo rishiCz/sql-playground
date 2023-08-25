@@ -37,3 +37,17 @@ SQL Playground is a web application designed to provide an interactive platform 
     1. react-redux (state management), 
     2. papaparse (CSV parsing), 
     3. gh-pages (web deployment)
+
+## Performance
+### Load time performance measured using Light-House extension
+![remote after](https://github.com/rishiCz/sql-playground/assets/98217604/82aa79f9-e317-4a9c-be56-a31eb7e28419)
+
+## Optimisation
+
+#### 1. Used memo() function by react at every component export available
+#### 2. Used best practices for useEffect() function and dependencies
+![Screenshot 2023-08-25 154652](https://github.com/rishiCz/sql-playground/assets/98217604/d6aa7ec8-3a79-40f8-b9dc-6b5b9131eb0f)
+
+
+
+
