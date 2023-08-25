@@ -24,13 +24,12 @@ const Table = ({ csv, handleChildData }) => {
     return()=>{
       if (prevSearch) prevSearch.style.backgroundColor = "unset";
     }
-    
   }, [searchVal,prevSearch]);
 
   useEffect(() => {
     if (csv) fetchCSVData(csv).then((data) => {setCSVData(data)
     handleChildData(data)});
-  }, [csv]);
+  },[csv,handleChildData]);
 
   return (
     <>
