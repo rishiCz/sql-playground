@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/sql-playground/static/css/main.326b6411.css",
-    "main.js": "/sql-playground/static/js/main.11a928fd.js",
+    "main.js": "/sql-playground/static/js/main.6be5e632.js",
     "static/media/customers.csv": "/sql-playground/static/media/customers.72e517f13b23c0f2db59.csv",
     "static/media/employees.csv": "/sql-playground/static/media/employees.4aef3c621c7677695c8c.csv",
     "static/media/categories.csv": "/sql-playground/static/media/categories.683a95f00240791dd6b6.csv",
     "index.html": "/sql-playground/index.html",
     "main.326b6411.css.map": "/sql-playground/static/css/main.326b6411.css.map",
-    "main.11a928fd.js.map": "/sql-playground/static/js/main.11a928fd.js.map"
+    "main.6be5e632.js.map": "/sql-playground/static/js/main.6be5e632.js.map"
   },
   "entrypoints": [
     "static/css/main.326b6411.css",
-    "static/js/main.11a928fd.js"
+    "static/js/main.6be5e632.js"
   ]
 }
