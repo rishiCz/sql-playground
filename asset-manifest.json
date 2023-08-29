@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "/sql-playground/static/css/main.6c1c42e0.css",
-    "main.js": "/sql-playground/static/js/main.b0f8c7bd.js",
+    "main.css": "/sql-playground/static/css/main.a8cd01c2.css",
+    "main.js": "/sql-playground/static/js/main.46098eae.js",
+    "static/media/orders.csv": "/sql-playground/static/media/orders.593c117c8f065070ed54.csv",
+    "static/media/order_details.csv": "/sql-playground/static/media/order_details.2640cda266f7dc3a798a.csv",
     "static/media/sqlLogo.png": "/sql-playground/static/media/sqlLogo.be99f21a93dbdf9b0e20.png",
     "static/media/customers.csv": "/sql-playground/static/media/customers.72e517f13b23c0f2db59.csv",
     "static/media/employees.csv": "/sql-playground/static/media/employees.4aef3c621c7677695c8c.csv",
+    "static/media/products.csv": "/sql-playground/static/media/products.9e07c298329eb0f1e429.csv",
+    "static/media/suppliers.csv": "/sql-playground/static/media/suppliers.497607478d1ed23c28cf.csv",
     "static/media/categories.csv": "/sql-playground/static/media/categories.683a95f00240791dd6b6.csv",
+    "static/media/territories.csv": "/sql-playground/static/media/territories.21163bdbead926d34b18.csv",
     "index.html": "/sql-playground/index.html",
-    "main.6c1c42e0.css.map": "/sql-playground/static/css/main.6c1c42e0.css.map",
-    "main.b0f8c7bd.js.map": "/sql-playground/static/js/main.b0f8c7bd.js.map"
+    "static/media/employee_territories.csv": "/sql-playground/static/media/employee_territories.e08300b179d586840196.csv",
+    "static/media/shippers.csv": "/sql-playground/static/media/shippers.9469150686a650e0f2e0.csv",
+    "static/media/regions.csv": "/sql-playground/static/media/regions.768fd14cc373fc78a901.csv",
+    "main.a8cd01c2.css.map": "/sql-playground/static/css/main.a8cd01c2.css.map",
+    "main.46098eae.js.map": "/sql-playground/static/js/main.46098eae.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c1c42e0.css",
-    "static/js/main.b0f8c7bd.js"
+    "static/css/main.a8cd01c2.css",
+    "static/js/main.46098eae.js"
   ]
 }
